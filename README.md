@@ -1,5 +1,7 @@
 # GACC-Bench Evaluation
 
+Paper: [GACC-Bench: Benchmarking Goal-Adaptive Context Compression Ability across Large Language Models](https://arxiv.org/abs/2610.21893)
+
 This directory evaluates one JSONL file with the GACC-Bench protocol. The
 compressor, reader, and judge are configured independently through
 OpenAI-compatible APIs. Budgets are specified as percentages of the original
