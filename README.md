@@ -29,39 +29,71 @@ Results on **GACC-Bench-full** (500 goals, 2,571 questions) from [Table 2 of the
 
 All scores are accuracy percentages (higher is better). The seven source columns report **Macro** accuracy; the last two columns report overall **Macro** and **Micro** accuracy. **Bold** marks the best score in each column within a budget, including ties.
 
+Scroll horizontally to view all columns.
+
 ### 5% retention budget
 
-| Compressor | LBv2 | HELMET | L-Eval | Loong | MB | LCB | SWE | Overall Macro | Overall Micro |
-| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| GPT-6-Astra | **14.29** | **2.50** | 0.00 | **11.76** | 0.00 | **6.41** | **17.86** | **6.00** | 42.43 |
-| GPT-6.1-Sol | **14.29** | **2.50** | **1.96** | 8.82 | 0.00 | **6.41** | 10.71 | 5.40 | **42.86** |
-| GPT-5.6-Sol | 6.12 | **2.50** | **1.96** | 1.96 | 0.00 | 1.28 | 0.00 | 1.80 | 29.64 |
-| Claude-Opus-5.5 | 6.12 | 0.00 | 0.00 | 6.86 | 0.00 | 3.85 | 3.57 | 2.80 | 28.94 |
-| Gemini-3.6-flash | 2.04 | 0.00 | 0.00 | 0.00 | 0.00 | 1.28 | 0.00 | 0.40 | 20.30 |
-| Qwen3.8-Max | 6.12 | **2.50** | **1.96** | 0.98 | 0.00 | **6.41** | 10.71 | 3.00 | 30.84 |
-| GLM-5.3 | **14.29** | 0.00 | **1.96** | 7.84 | 0.00 | 5.13 | 10.71 | 4.80 | 31.19 |
-| GLM-5.3-flash | 8.16 | 0.00 | 0.98 | 4.90 | 0.00 | 1.28 | 7.14 | 2.60 | 31.43 |
-| DeepSeek-V4-Pro | 8.16 | **2.50** | 0.00 | 0.00 | 0.00 | 5.13 | 3.57 | 2.00 | 28.70 |
-| Kimi-K3 | 10.20 | **2.50** | 0.98 | 2.94 | **0.99** | 3.85 | 7.14 | 3.20 | 28.67 |
+<table>
+  <thead>
+    <tr>
+      <th nowrap>Compressor</th>
+      <th nowrap>LongBench-v2</th>
+      <th nowrap>HELMET</th>
+      <th nowrap>L-Eval</th>
+      <th nowrap>Loong</th>
+      <th nowrap>MeetingBank</th>
+      <th nowrap>LongCodeBench</th>
+      <th nowrap>SWE-agent (SWE-Bench Verified)</th>
+      <th nowrap>Overall Macro</th>
+      <th nowrap>Overall Micro</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td nowrap>GPT-6-Astra</td><td align="right"><strong>14.29</strong></td><td align="right"><strong>2.50</strong></td><td align="right">0.00</td><td align="right"><strong>11.76</strong></td><td align="right">0.00</td><td align="right"><strong>6.41</strong></td><td align="right"><strong>17.86</strong></td><td align="right"><strong>6.00</strong></td><td align="right">42.43</td></tr>
+    <tr><td nowrap>GPT-6.1-Sol</td><td align="right"><strong>14.29</strong></td><td align="right"><strong>2.50</strong></td><td align="right"><strong>1.96</strong></td><td align="right">8.82</td><td align="right">0.00</td><td align="right"><strong>6.41</strong></td><td align="right">10.71</td><td align="right">5.40</td><td align="right"><strong>42.86</strong></td></tr>
+    <tr><td nowrap>GPT-5.6-Sol</td><td align="right">6.12</td><td align="right"><strong>2.50</strong></td><td align="right"><strong>1.96</strong></td><td align="right">1.96</td><td align="right">0.00</td><td align="right">1.28</td><td align="right">0.00</td><td align="right">1.80</td><td align="right">29.64</td></tr>
+    <tr><td nowrap>Claude-Opus-5.5</td><td align="right">6.12</td><td align="right">0.00</td><td align="right">0.00</td><td align="right">6.86</td><td align="right">0.00</td><td align="right">3.85</td><td align="right">3.57</td><td align="right">2.80</td><td align="right">28.94</td></tr>
+    <tr><td nowrap>Gemini-3.6-flash</td><td align="right">2.04</td><td align="right">0.00</td><td align="right">0.00</td><td align="right">0.00</td><td align="right">0.00</td><td align="right">1.28</td><td align="right">0.00</td><td align="right">0.40</td><td align="right">20.30</td></tr>
+    <tr><td nowrap>Qwen3.8-Max</td><td align="right">6.12</td><td align="right"><strong>2.50</strong></td><td align="right"><strong>1.96</strong></td><td align="right">0.98</td><td align="right">0.00</td><td align="right"><strong>6.41</strong></td><td align="right">10.71</td><td align="right">3.00</td><td align="right">30.84</td></tr>
+    <tr><td nowrap>GLM-5.3</td><td align="right"><strong>14.29</strong></td><td align="right">0.00</td><td align="right"><strong>1.96</strong></td><td align="right">7.84</td><td align="right">0.00</td><td align="right">5.13</td><td align="right">10.71</td><td align="right">4.80</td><td align="right">31.19</td></tr>
+    <tr><td nowrap>GLM-5.3-flash</td><td align="right">8.16</td><td align="right">0.00</td><td align="right">0.98</td><td align="right">4.90</td><td align="right">0.00</td><td align="right">1.28</td><td align="right">7.14</td><td align="right">2.60</td><td align="right">31.43</td></tr>
+    <tr><td nowrap>DeepSeek-V4-Pro</td><td align="right">8.16</td><td align="right"><strong>2.50</strong></td><td align="right">0.00</td><td align="right">0.00</td><td align="right">0.00</td><td align="right">5.13</td><td align="right">3.57</td><td align="right">2.00</td><td align="right">28.70</td></tr>
+    <tr><td nowrap>Kimi-K3</td><td align="right">10.20</td><td align="right"><strong>2.50</strong></td><td align="right">0.98</td><td align="right">2.94</td><td align="right"><strong>0.99</strong></td><td align="right">3.85</td><td align="right">7.14</td><td align="right">3.20</td><td align="right">28.67</td></tr>
+  </tbody>
+</table>
 
 ### 10% retention budget
 
-| Compressor | LBv2 | HELMET | L-Eval | Loong | MB | LCB | SWE | Overall Macro | Overall Micro |
-| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| GPT-6-Astra | **30.61** | 12.50 | **11.76** | 21.57 | 0.99 | **17.95** | 17.86 | **14.80** | **57.41** |
-| GPT-6.1-Sol | **30.61** | 12.50 | 9.80 | **24.51** | 1.98 | 14.10 | **21.43** | **14.80** | 56.40 |
-| GPT-5.6-Sol | 14.29 | 0.00 | 5.88 | 5.88 | 1.98 | 5.13 | 3.57 | 5.20 | 43.21 |
-| Claude-Opus-5.5 | 20.41 | 7.50 | 1.96 | 14.71 | 1.98 | 11.54 | 17.86 | 9.20 | 43.95 |
-| Gemini-3.6-flash | 18.37 | 2.50 | 0.00 | 1.96 | 0.00 | 5.13 | 7.14 | 3.60 | 33.68 |
-| Qwen3.8-Max | 14.29 | **15.00** | 2.94 | 4.90 | 0.99 | 6.41 | 17.86 | 6.40 | 44.96 |
-| GLM-5.3 | 20.41 | 7.50 | 7.84 | 15.69 | **2.97** | 12.82 | 14.29 | 10.80 | 48.46 |
-| GLM-5.3-flash | 20.41 | **15.00** | 3.92 | 13.73 | **2.97** | 10.26 | 17.86 | 10.00 | 50.80 |
-| DeepSeek-V4-Pro | 10.20 | 5.00 | 1.96 | 4.90 | 0.00 | **17.95** | 10.71 | 6.20 | 42.40 |
-| Kimi-K3 | 20.41 | 5.00 | 2.94 | 5.88 | 1.98 | 6.41 | 17.86 | 6.60 | 45.62 |
+<table>
+  <thead>
+    <tr>
+      <th nowrap>Compressor</th>
+      <th nowrap>LongBench-v2</th>
+      <th nowrap>HELMET</th>
+      <th nowrap>L-Eval</th>
+      <th nowrap>Loong</th>
+      <th nowrap>MeetingBank</th>
+      <th nowrap>LongCodeBench</th>
+      <th nowrap>SWE-agent (SWE-Bench Verified)</th>
+      <th nowrap>Overall Macro</th>
+      <th nowrap>Overall Micro</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td nowrap>GPT-6-Astra</td><td align="right"><strong>30.61</strong></td><td align="right">12.50</td><td align="right"><strong>11.76</strong></td><td align="right">21.57</td><td align="right">0.99</td><td align="right"><strong>17.95</strong></td><td align="right">17.86</td><td align="right"><strong>14.80</strong></td><td align="right"><strong>57.41</strong></td></tr>
+    <tr><td nowrap>GPT-6.1-Sol</td><td align="right"><strong>30.61</strong></td><td align="right">12.50</td><td align="right">9.80</td><td align="right"><strong>24.51</strong></td><td align="right">1.98</td><td align="right">14.10</td><td align="right"><strong>21.43</strong></td><td align="right"><strong>14.80</strong></td><td align="right">56.40</td></tr>
+    <tr><td nowrap>GPT-5.6-Sol</td><td align="right">14.29</td><td align="right">0.00</td><td align="right">5.88</td><td align="right">5.88</td><td align="right">1.98</td><td align="right">5.13</td><td align="right">3.57</td><td align="right">5.20</td><td align="right">43.21</td></tr>
+    <tr><td nowrap>Claude-Opus-5.5</td><td align="right">20.41</td><td align="right">7.50</td><td align="right">1.96</td><td align="right">14.71</td><td align="right">1.98</td><td align="right">11.54</td><td align="right">17.86</td><td align="right">9.20</td><td align="right">43.95</td></tr>
+    <tr><td nowrap>Gemini-3.6-flash</td><td align="right">18.37</td><td align="right">2.50</td><td align="right">0.00</td><td align="right">1.96</td><td align="right">0.00</td><td align="right">5.13</td><td align="right">7.14</td><td align="right">3.60</td><td align="right">33.68</td></tr>
+    <tr><td nowrap>Qwen3.8-Max</td><td align="right">14.29</td><td align="right"><strong>15.00</strong></td><td align="right">2.94</td><td align="right">4.90</td><td align="right">0.99</td><td align="right">6.41</td><td align="right">17.86</td><td align="right">6.40</td><td align="right">44.96</td></tr>
+    <tr><td nowrap>GLM-5.3</td><td align="right">20.41</td><td align="right">7.50</td><td align="right">7.84</td><td align="right">15.69</td><td align="right"><strong>2.97</strong></td><td align="right">12.82</td><td align="right">14.29</td><td align="right">10.80</td><td align="right">48.46</td></tr>
+    <tr><td nowrap>GLM-5.3-flash</td><td align="right">20.41</td><td align="right"><strong>15.00</strong></td><td align="right">3.92</td><td align="right">13.73</td><td align="right"><strong>2.97</strong></td><td align="right">10.26</td><td align="right">17.86</td><td align="right">10.00</td><td align="right">50.80</td></tr>
+    <tr><td nowrap>DeepSeek-V4-Pro</td><td align="right">10.20</td><td align="right">5.00</td><td align="right">1.96</td><td align="right">4.90</td><td align="right">0.00</td><td align="right"><strong>17.95</strong></td><td align="right">10.71</td><td align="right">6.20</td><td align="right">42.40</td></tr>
+    <tr><td nowrap>Kimi-K3</td><td align="right">20.41</td><td align="right">5.00</td><td align="right">2.94</td><td align="right">5.88</td><td align="right">1.98</td><td align="right">6.41</td><td align="right">17.86</td><td align="right">6.60</td><td align="right">45.62</td></tr>
+  </tbody>
+</table>
 
 **Metrics.** Macro is the percentage of goals for which every associated question is answered correctly. Micro is the percentage of individual questions answered correctly. Overall Macro is computed over all 500 goals, rather than by averaging the seven source scores.
-
-**Abbreviations.** LBv2: LongBench-v2; MB: MeetingBank; LCB: LongCodeBench; SWE: agent trajectories from SWE-Bench Verified.
 
 ## Dataset
 
