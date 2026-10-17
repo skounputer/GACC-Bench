@@ -36,16 +36,20 @@ Scroll horizontally to view all columns.
 <table>
   <thead>
     <tr>
-      <th nowrap>Compressor</th>
-      <th nowrap>LongBench-v2</th>
-      <th nowrap>HELMET</th>
-      <th nowrap>L-Eval</th>
-      <th nowrap>Loong</th>
-      <th nowrap>MeetingBank</th>
-      <th nowrap>LongCodeBench</th>
-      <th nowrap>SWE-agent (SWE-Bench Verified)</th>
-      <th nowrap>Overall Macro</th>
-      <th nowrap>Overall Micro</th>
+      <th rowspan="2" scope="col" nowrap>Compressor</th>
+      <th colspan="7" scope="colgroup" align="center" nowrap>Dataset-level Macro Accuracy</th>
+      <th colspan="2" scope="colgroup" align="center" nowrap>Overall Accuracy</th>
+    </tr>
+    <tr>
+      <th scope="col" nowrap>LongBench-v2</th>
+      <th scope="col" nowrap>HELMET</th>
+      <th scope="col" nowrap>L-Eval</th>
+      <th scope="col" nowrap>Loong</th>
+      <th scope="col" nowrap>MeetingBank</th>
+      <th scope="col" nowrap>LongCodeBench</th>
+      <th scope="col" nowrap>SWE-agent (SWE-Bench Verified)</th>
+      <th scope="col" nowrap>Macro</th>
+      <th scope="col" nowrap>Micro</th>
     </tr>
   </thead>
   <tbody>
@@ -67,16 +71,20 @@ Scroll horizontally to view all columns.
 <table>
   <thead>
     <tr>
-      <th nowrap>Compressor</th>
-      <th nowrap>LongBench-v2</th>
-      <th nowrap>HELMET</th>
-      <th nowrap>L-Eval</th>
-      <th nowrap>Loong</th>
-      <th nowrap>MeetingBank</th>
-      <th nowrap>LongCodeBench</th>
-      <th nowrap>SWE-agent (SWE-Bench Verified)</th>
-      <th nowrap>Overall Macro</th>
-      <th nowrap>Overall Micro</th>
+      <th rowspan="2" scope="col" nowrap>Compressor</th>
+      <th colspan="7" scope="colgroup" align="center" nowrap>Dataset-level Macro Accuracy</th>
+      <th colspan="2" scope="colgroup" align="center" nowrap>Overall Accuracy</th>
+    </tr>
+    <tr>
+      <th scope="col" nowrap>LongBench-v2</th>
+      <th scope="col" nowrap>HELMET</th>
+      <th scope="col" nowrap>L-Eval</th>
+      <th scope="col" nowrap>Loong</th>
+      <th scope="col" nowrap>MeetingBank</th>
+      <th scope="col" nowrap>LongCodeBench</th>
+      <th scope="col" nowrap>SWE-agent (SWE-Bench Verified)</th>
+      <th scope="col" nowrap>Macro</th>
+      <th scope="col" nowrap>Micro</th>
     </tr>
   </thead>
   <tbody>
