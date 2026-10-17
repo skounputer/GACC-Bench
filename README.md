@@ -1,8 +1,6 @@
 <div align="center">
 
-# GACC-Bench
-
-### Benchmarking Goal-Adaptive Context Compression Ability across Large Language Models
+# GACC-Bench: Benchmarking Goal-Adaptive Context Compression Ability across Large Language Models
 
 <a href="https://arxiv.org/abs/2610.21893"><img src="https://img.shields.io/badge/Paper-arXiv%202610.21893-b31b1b" alt="Paper"></a>
 <a href="https://huggingface.co/datasets/Regimes/GACC-Bench"><img src="https://img.shields.io/badge/Dataset-%F0%9F%A4%97%20Hugging%20Face-yellow" alt="Dataset"></a>
