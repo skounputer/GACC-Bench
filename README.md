@@ -23,6 +23,46 @@ The benchmark contains **500 goals and 2,571 questions over 281 contexts**, span
 - **[2026.10.17]** The dataset is available on [Hugging Face](https://huggingface.co/datasets/Regimes/GACC-Bench), with `load_dataset()` support, Parquet files, and original JSONL downloads.
 - **[2026.10.15]** Our [paper](https://arxiv.org/abs/2610.21893) is available on arXiv.
 
+## Main Results
+
+Results on **GACC-Bench-full** (500 goals, 2,571 questions) from [Table 2 of the paper](https://arxiv.org/html/2610.21893v1#S4.T2). The models below serve as compressors; **DeepSeek-V4-Pro** is the fixed reader and judge. Budgets specify the percentage of source-context tokens retained.
+
+All scores are accuracy percentages (higher is better). The seven source columns report **Macro** accuracy; the last two columns report overall **Macro** and **Micro** accuracy. **Bold** marks the best score in each column within a budget, including ties.
+
+### 5% retention budget
+
+| Compressor | LBv2 | HELMET | L-Eval | Loong | MB | LCB | SWE | Overall Macro | Overall Micro |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| GPT-6-Astra | **14.29** | **2.50** | 0.00 | **11.76** | 0.00 | **6.41** | **17.86** | **6.00** | 42.43 |
+| GPT-6.1-Sol | **14.29** | **2.50** | **1.96** | 8.82 | 0.00 | **6.41** | 10.71 | 5.40 | **42.86** |
+| GPT-5.6-Sol | 6.12 | **2.50** | **1.96** | 1.96 | 0.00 | 1.28 | 0.00 | 1.80 | 29.64 |
+| Claude-Opus-5.5 | 6.12 | 0.00 | 0.00 | 6.86 | 0.00 | 3.85 | 3.57 | 2.80 | 28.94 |
+| Gemini-3.6-flash | 2.04 | 0.00 | 0.00 | 0.00 | 0.00 | 1.28 | 0.00 | 0.40 | 20.30 |
+| Qwen3.8-Max | 6.12 | **2.50** | **1.96** | 0.98 | 0.00 | **6.41** | 10.71 | 3.00 | 30.84 |
+| GLM-5.3 | **14.29** | 0.00 | **1.96** | 7.84 | 0.00 | 5.13 | 10.71 | 4.80 | 31.19 |
+| GLM-5.3-flash | 8.16 | 0.00 | 0.98 | 4.90 | 0.00 | 1.28 | 7.14 | 2.60 | 31.43 |
+| DeepSeek-V4-Pro | 8.16 | **2.50** | 0.00 | 0.00 | 0.00 | 5.13 | 3.57 | 2.00 | 28.70 |
+| Kimi-K3 | 10.20 | **2.50** | 0.98 | 2.94 | **0.99** | 3.85 | 7.14 | 3.20 | 28.67 |
+
+### 10% retention budget
+
+| Compressor | LBv2 | HELMET | L-Eval | Loong | MB | LCB | SWE | Overall Macro | Overall Micro |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| GPT-6-Astra | **30.61** | 12.50 | **11.76** | 21.57 | 0.99 | **17.95** | 17.86 | **14.80** | **57.41** |
+| GPT-6.1-Sol | **30.61** | 12.50 | 9.80 | **24.51** | 1.98 | 14.10 | **21.43** | **14.80** | 56.40 |
+| GPT-5.6-Sol | 14.29 | 0.00 | 5.88 | 5.88 | 1.98 | 5.13 | 3.57 | 5.20 | 43.21 |
+| Claude-Opus-5.5 | 20.41 | 7.50 | 1.96 | 14.71 | 1.98 | 11.54 | 17.86 | 9.20 | 43.95 |
+| Gemini-3.6-flash | 18.37 | 2.50 | 0.00 | 1.96 | 0.00 | 5.13 | 7.14 | 3.60 | 33.68 |
+| Qwen3.8-Max | 14.29 | **15.00** | 2.94 | 4.90 | 0.99 | 6.41 | 17.86 | 6.40 | 44.96 |
+| GLM-5.3 | 20.41 | 7.50 | 7.84 | 15.69 | **2.97** | 12.82 | 14.29 | 10.80 | 48.46 |
+| GLM-5.3-flash | 20.41 | **15.00** | 3.92 | 13.73 | **2.97** | 10.26 | 17.86 | 10.00 | 50.80 |
+| DeepSeek-V4-Pro | 10.20 | 5.00 | 1.96 | 4.90 | 0.00 | **17.95** | 10.71 | 6.20 | 42.40 |
+| Kimi-K3 | 20.41 | 5.00 | 2.94 | 5.88 | 1.98 | 6.41 | 17.86 | 6.60 | 45.62 |
+
+**Metrics.** Macro is the percentage of goals for which every associated question is answered correctly. Micro is the percentage of individual questions answered correctly. Overall Macro is computed over all 500 goals, rather than by averaging the seven source scores.
+
+**Abbreviations.** LBv2: LongBench-v2; MB: MeetingBank; LCB: LongCodeBench; SWE: agent trajectories from SWE-Bench Verified.
+
 ## Dataset
 
 | Configuration | Contexts | Goals | Questions |
